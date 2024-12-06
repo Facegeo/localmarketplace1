@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="alert alert-danger text-center">
+            <h4>Oops! Something went wrong.</h4>
+            <p>{{ message }}</p>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'farmer-dashboard' %}" class="btn btn-primary">Go Back to Post Product Page</a>
+        </div>
+    </div>
+</body>
+</html>

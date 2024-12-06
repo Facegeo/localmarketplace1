@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Registration | Local Farmers MarketPlace</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <link rel="icon" href="{% static 'assets/favicons/icon.jpg' %}">
+
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center bg-success text-white">
+            <h4>Farmer Registration</h4>
+          </div>
+          <div class="card-body">
+            <form method="POST" >
+              {% csrf_token %}
+              <!-- Full Name -->
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" name="full_name" id="fullName" class="form-control" placeholder="Enter your full name" required>
+              </div>
+
+              <!-- Username -->
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Choose a username" required>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter your phone number" required>
+              </div>
+
+              <!-- Location -->
+              <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" name="location" id="location" class="form-control" placeholder="Enter your farm's location" required>
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Create a password" required>
+              </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                    <label class="form-check-label" for="form2Example3">
+                      I agree all statements in <a href="{% url 'terms' %}" class="text-success">Terms of service</a>
+                    </label>
+                </div>
+
+              <!-- Register Button -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-success">Register</button>
+              </div>
+
+                <a href="{% url 'login-farmer' %}" class="text-success">Already have an Account</a>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

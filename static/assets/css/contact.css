@@ -1,0 +1,45 @@
+/* Change Send Message Button Color */
+button {
+    background-color: #228B22;  /* Change to your preferred green */
+    color: #fff;  /* White text */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1d6e1d;  /* Darker green on hover */
+}
+/* Change icon color */
+.bi {
+    color: #228B22;  /* Green for all icons */
+}
+
+.bi-geo-alt:hover, .bi-telephone:hover, .bi-envelope:hover, .bi-clock:hover {
+    color: #1d6e1d;  /* Darker green on hover */
+}
+/* Style Contact Info Section */
+.info-item {
+    background-color: #f0f8f0; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.info-item i {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #228B22; /* Green color for icons */
+}
+
+.info-item h3 {
+    color: #228B22;  /* Heading color */
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.info-item p {
+    color: #555;  /* Subtle text color */
+}

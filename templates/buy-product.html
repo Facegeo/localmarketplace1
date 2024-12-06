@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buy Our Local Farm Produce</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <link rel="icon" href="{% static 'assets/favicons/icon.jpg' %}">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center">Buy {{ product.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p>Price: Ksh {{ product.price }}</p>
+        <p>Available: {{ product.quantity }}</p>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="1" max="{{ product.quantity }}" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Buy</button>
+    </form>
+</div>
+
+</body>
+</html>

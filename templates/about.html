@@ -1,0 +1,72 @@
+{% extends 'starter-page.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}About Us - Local Farmers MarketPlace | Get to know more{% endblock %}</title>
+{% load static %}
+    <link rel="icon" href="{% static 'assets/favicons/about.png' %}">
+
+</head>
+<body>
+
+
+
+{% block body %}
+    <br><br>
+    <!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>Connecting Farmers with Consumers for a Sustainable Future</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-3">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <img src="{% static 'assets/img/about/about us.jpg' %}" alt="About Us - Local Farmers Marketplace" class="img-fluid">
+      </div>
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-content ps-0 ps-lg-3">
+          <h3>Empowering Farmers and Simplifying Access to Fresh Produce</h3>
+          <p class="fst-italic">
+            Our mission is to bridge the gap between farmers and consumers, ensuring fair trade practices and access to fresh, locally sourced products.
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-leaf-1"></i>
+              <div>
+                <h4>Supporting Local Communities</h4>
+                <p>We provide a platform for farmers to sell directly to consumers, fostering economic growth and sustainability in local communities.</p>
+              </div>
+            </li>
+            <li>
+              <i class="bi bi-leaf"></i>
+              <div>
+                <h4>Ensuring Freshness and Quality</h4>
+                <p>Our marketplace ensures consumers get high-quality products, reducing food miles and supporting environmentally friendly practices.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+
+{% endblock %}
+
+</body>
+</html>

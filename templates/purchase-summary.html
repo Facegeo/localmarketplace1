@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Purchase Summary</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <link rel="icon" href="{% static 'assets/favicons/icon.jpg' %}">
+</head>
+<body>
+<!-- purchase-summary.html -->
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Purchase Summary</h2>
+        <div class="mb-3">
+            <p><strong>Your Name:</strong> {{ customer_name }}</p>
+        </div>
+        <div class="mb-3">
+            <p><strong>Your Email:</strong> {{ customer_email }}</p>
+        </div>
+        <div class="mb-3">
+            <h4><strong>Product:</strong> {{ product.name }}</h4>
+        </div>
+        <div class="mb-3">
+            <p><strong>Quantity:</strong> {{ quantity }}</p>
+        </div>
+        <div class="mb-3">
+            <p><strong>Delivery Location:</strong> {{ county }}, {{ town }}</p>
+        </div>
+        <div class="mb-3">
+            <p><strong>Subtotal:</strong> Ksh. {{ subtotal }}</p>
+        </div>
+        <a class="btn btn-success w-100" href="{% url 'pay' product.product_id %}">Pay</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>

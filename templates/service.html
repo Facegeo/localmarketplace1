@@ -1,0 +1,110 @@
+{% extends 'starter-page.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Services | Local Farmers MarketPlace{% endblock %}</title>
+{% load static %}
+
+</head>
+<body>
+
+{% block body %}
+    <br><br>
+	<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>Our platform offers innovative services to connect farmers and consumers seamlessly.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <!-- Service Item 1 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <i class="bi bi-basket2-fill icon"></i>
+          <div>
+            <h3>Direct Purchase from Farmers</h3>
+            <p>Enabling consumers to buy fresh produce directly from farmers, ensuring fair prices and supporting local agriculture.</p>
+            <a href="service-details.html" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 2 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <i class="bi bi-truck icon"></i>
+          <div>
+            <h3>Efficient Delivery Services</h3>
+            <p>Our streamlined delivery ensures fresh produce reaches consumers quickly, minimizing delays and waste.</p>
+            <a href="service-details.html" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 3 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <i class="bi bi-graph-up icon"></i>
+          <div>
+            <h3>Farmer Support Programs</h3>
+            <p>We provide resources and training for farmers to improve crop yields and connect with wider markets.</p>
+            <a href="service-details.html" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 4 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <i class="bi bi-chat-dots icon"></i>
+          <div>
+            <h3>Consumer Feedback System</h3>
+            <p>Gathering consumer feedback to ensure high-quality standards and improve the shopping experience.</p>
+            <a href="service-details.html" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 5 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative">
+          <i class="bi bi-calendar-event icon"></i>
+          <div>
+            <h3>Seasonal Produce Updates</h3>
+            <p>Keeping consumers informed about seasonal produce and availability for better planning and satisfaction.</p>
+            <a href="service-details.html" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item 6 -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative">
+          <i class="bi bi-bar-chart-line icon"></i>
+          <div>
+            <h3>Marketplace Analytics</h3>
+            <p>Providing farmers with valuable insights on sales, trends, and demand for better decision-making.</p>
+            <a href="service-details.html" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+{% endblock %}
+
+</body>
+</html>

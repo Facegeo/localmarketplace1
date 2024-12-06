@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Dashboard | Local Farmers MarketPlace</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <link rel="icon" href="{% static 'assets/favicons/icon.jpg' %}">
+
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="text-center">
+      <h1 class="display-4">Welcome,{{ username }}</h1>
+      <p class="lead mt-3">What would you like to do today?</p>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Post a Product</h5>
+            <p class="card-text">Add new products for sale and manage your stock.</p>
+            <a href="{% url 'post-product' %}" class="btn btn-success">Post Product</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">View Products</h5>
+            <p class="card-text">See all the products you have posted and update them if needed.</p>
+            <a href="{% url 'marketplace' %}" class="btn btn-success">View Products</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Track Sales</h5>
+            <p class="card-text">Monitor your sales and track product performance.</p>
+            <a href="" class="btn btn-success">Track Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Update Profile</h5>
+            <p class="card-text">Edit your personal details and contact information.</p>
+            <a href="" class="btn btn-success">Update Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Logout</h5>
+            <p class="card-text">Log out of your account securely.</p>
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
